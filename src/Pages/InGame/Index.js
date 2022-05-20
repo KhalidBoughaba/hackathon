@@ -1,4 +1,5 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
+import wayCar from "../../assets/wayCar.png";
 
 export default function Index(i) {
   // States
@@ -76,7 +77,9 @@ export default function Index(i) {
           </div>
         ))}
       </div>
-      <img src="../../../assets/car-street.png" alt="" />
+      <div className="wayCar">
+        <img src={wayCar} alt="" />
+      </div>
       <h1>Answer</h1>
       <div className="all_iteams">
         {answers.map((answer, i) => (
