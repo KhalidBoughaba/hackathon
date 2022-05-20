@@ -89,7 +89,7 @@ export default function Index(i) {
               addChoice(answer);
             }}
           >
-            {answer}
+            {/* {answer} */}
           </div>
         ))}
       </div>
