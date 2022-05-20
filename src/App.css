@@ -30,3 +30,9 @@ body{
     margin:0 10px;
     
 }
+
+.street_care{
+    width: 50%;
+    margin: 0 350px;
+    /* background:black */
+}

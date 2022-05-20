@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react";
+import CarStreet from "../../assets/car-street.png";
 
 export default function Index(i) {
   // States
@@ -76,7 +77,9 @@ export default function Index(i) {
           </div>
         ))}
       </div>
-      <img src="../../../assets/car-street.png" alt="" />
+      <div className="image_warp">
+        <img src={CarStreet} alt="" className="street_care" />
+      </div>
       <h1>Answer</h1>
       <div className="all_iteams">
         {answers.map((answer, i) => (
@@ -89,7 +92,7 @@ export default function Index(i) {
               addChoice(answer);
             }}
           >
-            {/* {answer} */}
+            {answer}
           </div>
         ))}
       </div>
