@@ -55,7 +55,6 @@ export default function Index(i) {
   };
 
   //   On reset
-
   const Reset = () => {
     setAnswers([]);
 
@@ -63,30 +62,37 @@ export default function Index(i) {
   };
   return (
     <div>
-      {choices.map((choice, i) => (
-        <button
-          key={i}
-          onClick={() => {
-            addAnswer(choice);
-            removeChoice(i);
-          }}
-        >
-          {choice}
-        </button>
-      ))}
+      <div className="all_iteams">
+        {choices.map((choice, i) => (
+          <div
+            className="choice"
+            key={i}
+            onClick={() => {
+              addAnswer(choice);
+              removeChoice(i);
+            }}
+          >
+            {choice}
+          </div>
+        ))}
+      </div>
+      <img src="../../../assets/car-street.png" alt="" />
       <h1>Answer</h1>
-      {answers.map((answer, i) => (
-        <button
-          key={i}
-          onClick={() => {
-            console.log(answer);
-            removeAnswer(i);
-            addChoice(answer);
-          }}
-        >
-          {answer}
-        </button>
-      ))}
+      <div className="all_iteams">
+        {answers.map((answer, i) => (
+          <div
+            className="choice"
+            key={i}
+            onClick={() => {
+              console.log(answer);
+              removeAnswer(i);
+              addChoice(answer);
+            }}
+          >
+            {/* {answer} */}
+          </div>
+        ))}
+      </div>
       <br />
       <button onClick={Reset}>Reset</button>
     </div>

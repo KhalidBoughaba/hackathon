@@ -1,5 +1,6 @@
 import React from "react";
 import {Route, Routes} from "react-router-dom";
+import "./App.css";
 import LandingPage from "./Pages/LandingPage/Index";
 import InGame from "./Pages/InGame/Index";
 export default function App() {
