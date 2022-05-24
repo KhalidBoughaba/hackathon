@@ -31,6 +31,8 @@ body{
     
 }
 
-.wayCar{
-    width:700px
+.street_care{
+    width: 50%;
+    margin: 0 350px;
+    /* background:black */
 }
