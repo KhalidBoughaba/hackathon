@@ -1,12 +1,18 @@
 import React, {useState, useEffect} from "react";
+import CarStreet from "../../assets/car-street.png";
+import Rigth from "../../assets/Rigth.png";
+import Bottom from "../../assets/Bottom.png";
+import Top from "../../assets/Top.png";
+import Back from "../../assets/Back.png";
 
 export default function Index(i) {
   // States
   const intialize = [1, 2, 3, 4, 1, 2, 3, 4];
   const [choices, setChoices] = useState([]);
   const [answers, setAnswers] = useState([]);
-
-  function shuffle(array) {
+  const [errorMessage, setErrorMessage] = useState("");
+  // Shuffle
+  const shuffle = (array) => {
     let currentIndex = array.length,
       randomIndex;
 
@@ -24,10 +30,19 @@ export default function Index(i) {
     }
 
     return array;
-  }
+  };
+  // On Submit
+  const Submit = () => {
+    const a1 = answers;
+    const a2 = [1, 2, 1];
+    const equation = JSON.stringify(answers) == JSON.stringify([1, 2, 1]);
+    if (equation) {
+      setErrorMessage("Good Job");
+    }
+    console.log(answers);
+  };
 
   useEffect(() => {
-    //     console.log(choices);
     setChoices(shuffle(intialize));
   }, []);
   // Add A choice
@@ -40,7 +55,6 @@ export default function Index(i) {
       ...answers.slice(0, index),
       ...answers.slice(index + 1, answers.length),
     ]);
-    console.log(answers);
   };
   // Remove A choice
   const removeChoice = (index) => {
@@ -62,6 +76,8 @@ export default function Index(i) {
   };
   return (
     <div>
+      {errorMessage && <div className="good_job">{errorMessage}</div>}
+
       <div className="all_iteams">
         {choices.map((choice, i) => (
           <div
@@ -72,29 +88,50 @@ export default function Index(i) {
               removeChoice(i);
             }}
           >
-            {choice}
+            {choice === 1 ? (
+              <img className="Btn_Arrow" src={Rigth} />
+            ) : choice === 2 ? (
+              <img className="Btn_Arrow" src={Bottom} />
+            ) : choice === 3 ? (
+              <img className="Btn_Arrow" src={Back} />
+            ) : (
+              <img className="Btn_Arrow" src={Top} />
+            )}
           </div>
         ))}
       </div>
-      <img src="../../../assets/car-street.png" alt="" />
-      <h1>Answer</h1>
+      <div className="image_warp">
+        <img src={CarStreet} alt="" className="street_care" />
+      </div>
       <div className="all_iteams">
         {answers.map((answer, i) => (
           <div
             className="choice"
             key={i}
             onClick={() => {
-              console.log(answer);
               removeAnswer(i);
               addChoice(answer);
             }}
           >
-            {/* {answer} */}
+            {answer === 1 ? (
+              <img className="Btn_Arrow" src={Rigth} />
+            ) : answer === 2 ? (
+              <img className="Btn_Arrow" src={Bottom} />
+            ) : answer === 3 ? (
+              <img className="Btn_Arrow" src={Back} />
+            ) : (
+              <img className="Btn_Arrow" src={Top} />
+            )}
           </div>
         ))}
       </div>
       <br />
-      <button onClick={Reset}>Reset</button>
+      <button className="btn-Reset" onClick={Reset}>
+        Reset
+      </button>
+      <button className="btn-Submit" onClick={Submit}>
+        Submit
+      </button>
     </div>
   );
 }
