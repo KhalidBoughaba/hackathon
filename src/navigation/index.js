@@ -16,12 +16,10 @@ export default function index() {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 5000);
+    }, 2000);
     return;
   }, []);
 
-  const {isFirstTimeUse, uid} = useSelector(state => state.Language);
-  console.log(uid);
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{headerShown: false}}>

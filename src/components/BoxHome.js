@@ -18,16 +18,7 @@ const BoxHome = ({children, isArabic}) => {
         alignItems: 'center',
         justifyContent: 'center',
       }}>
-      <Text
-        style={{
-          color: Colors.Secondary,
-          textAlign: 'center',
-
-          fontFamily: isArabic == 0 ? Fonts.Ara_Bold : Fonts.EC_Bold,
-          fontSize: 20,
-        }}>
-        {children}
-      </Text>
+      {children}
     </View>
   );
 };

@@ -11,7 +11,13 @@ import {
 import React, {useState} from 'react';
 import {Displayer} from '../utils';
 import {Colors, Waves, Images, Fonts} from '../constants';
-import {Box, Btn} from '../components';
+import {Box} from '../components';
+import Home from '../../assets/Home.png';
+import Job from '../../assets/job.png';
+import Gym from '../../assets/gym.png';
+import Market from '../../assets/market.png';
+import Traveling from '../../assets/traveling.png';
+import Park from '../../assets/park.png';
 
 import {useDispatch, useSelector} from 'react-redux';
 
@@ -71,7 +77,19 @@ const HomeScreen = ({navigation}) => {
                   params: {post: 'At Home', id: 0},
                 })
               }>
-              <Box isArabic={isArabic}>At Home </Box>
+              <Box isArabic={isArabic}>
+                <Image source={Home} />
+                <Text
+                  style={{
+                    color: Colors.Secondary,
+                    textAlign: 'center',
+
+                    fontFamily: Fonts.EC_Bold,
+                    fontSize: 20,
+                  }}>
+                  At Home
+                </Text>
+              </Box>
             </TouchableOpacity>
             <TouchableOpacity
               onPress={() =>
@@ -80,7 +98,19 @@ const HomeScreen = ({navigation}) => {
                   params: {post: 'At job', id: 1},
                 })
               }>
-              <Box isArabic={isArabic}> At job</Box>
+              <Box isArabic={isArabic}>
+                <Image source={Job} />
+                <Text
+                  style={{
+                    color: Colors.Secondary,
+                    textAlign: 'center',
+
+                    fontFamily: Fonts.EC_Bold,
+                    fontSize: 20,
+                  }}>
+                  At Job
+                </Text>
+              </Box>
             </TouchableOpacity>
           </View>
           <View style={{flexDirection: 'row'}}>
@@ -88,19 +118,43 @@ const HomeScreen = ({navigation}) => {
               onPress={() =>
                 navigation.navigate({
                   name: 'Todo',
-                  params: {post: 'At Park'},
+                  params: {post: 'At Park', id: 0},
                 })
               }>
-              <Box isArabic={isArabic}>At Park</Box>
+              <Box isArabic={isArabic}>
+                <Image source={Park} />
+                <Text
+                  style={{
+                    color: Colors.Secondary,
+                    textAlign: 'center',
+
+                    fontFamily: Fonts.EC_Bold,
+                    fontSize: 20,
+                  }}>
+                  At Park
+                </Text>
+              </Box>
             </TouchableOpacity>
             <TouchableOpacity
               onPress={() =>
                 navigation.navigate({
                   name: 'Todo',
-                  params: {post: 'At Gym'},
+                  params: {post: 'At Travel', id: 0},
                 })
               }>
-              <Box isArabic={isArabic}>At Gym</Box>
+              <Box isArabic={isArabic}>
+                <Image source={Traveling} />
+                <Text
+                  style={{
+                    color: Colors.Secondary,
+                    textAlign: 'center',
+
+                    fontFamily: Fonts.EC_Bold,
+                    fontSize: 20,
+                  }}>
+                  At Travel
+                </Text>
+              </Box>
             </TouchableOpacity>
           </View>
           <View style={{flexDirection: 'row'}}>
@@ -108,39 +162,43 @@ const HomeScreen = ({navigation}) => {
               onPress={() =>
                 navigation.navigate({
                   name: 'Todo',
-                  params: {post: 'At Gym'},
+                  params: {post: 'At Market', id: 0},
                 })
               }>
-              <Box isArabic={isArabic}>At Park</Box>
+              <Box isArabic={isArabic}>
+                <Image source={Market} />
+                <Text
+                  style={{
+                    color: Colors.Secondary,
+                    textAlign: 'center',
+
+                    fontFamily: Fonts.EC_Bold,
+                    fontSize: 20,
+                  }}>
+                  At Market
+                </Text>
+              </Box>
             </TouchableOpacity>
             <TouchableOpacity
               onPress={() =>
                 navigation.navigate({
                   name: 'Todo',
-                  params: {post: 'At Gym'},
+                  params: {post: 'At Gym', id: 0},
                 })
               }>
-              <Box isArabic={isArabic}>At Gym</Box>
-            </TouchableOpacity>
-          </View>
-          <View style={{flexDirection: 'row'}}>
-            <TouchableOpacity
-              onPress={() =>
-                navigation.navigate({
-                  name: 'Todo',
-                  params: {post: 'At Gym'},
-                })
-              }>
-              <Box isArabic={isArabic}>At Park</Box>
-            </TouchableOpacity>
-            <TouchableOpacity
-              onPress={() =>
-                navigation.navigate({
-                  name: 'Todo',
-                  params: {post: 'At Gym'},
-                })
-              }>
-              <Box isArabic={isArabic}>At Gym</Box>
+              <Box>
+                <Image source={Gym} />
+                <Text
+                  style={{
+                    color: Colors.Secondary,
+                    textAlign: 'center',
+
+                    fontFamily: Fonts.EC_Bold,
+                    fontSize: 20,
+                  }}>
+                  At Gym
+                </Text>
+              </Box>
             </TouchableOpacity>
           </View>
         </View>

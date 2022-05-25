@@ -11,14 +11,30 @@ const Intro = ({navigation}) => {
         <PersonHisto height={setHeight(40)} width={setWidth(50)} />
       </View>
       <ScrollView>
-        <Text style={[{paddingHorizontal: 20}, styles.Title]}>
+        <Text style={[{paddingHorizontal: 10}, styles.Title]}>
           Hello, I will share with you my story about my relationship with the
           environment,
         </Text>
         <View style={styles.HeadOne}>
           <View style={styles.ball} />
-          <Text style={styles.Title}>hh</Text>
+          <Text style={styles.Title}>
+            My life before knowing the importance of the environment
+          </Text>
         </View>
+        <View style={styles.HeadOne}>
+          <Text style={styles.Title}>
+            It has always been my habit to drive, even when places are close.
+          </Text>
+        </View>
+        <View style={{height: 40}} />
+        <View style={styles.HeadOne}>
+          <View style={styles.ball} />
+          <Text style={styles.Title}>
+            I used a bicycle to avoid air pollution
+          </Text>
+        </View>
+        <View style={{height: 40}} />
+
         <Btn navigation={() => navigation.navigate('Home')}>Next</Btn>
       </ScrollView>
     </View>
@@ -41,7 +57,7 @@ const styles = StyleSheet.create({
   },
   HeadOne: {
     flexDirection: 'row',
-    paddingHorizontal: 40,
+    paddingHorizontal: 20,
     marginTop: 10,
   },
   Title: {
