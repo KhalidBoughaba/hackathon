@@ -6,22 +6,19 @@ import {
   StyleSheet,
   Text,
   View,
+  TouchableOpacity,
 } from 'react-native';
 import React, {useState} from 'react';
 import {Displayer} from '../utils';
 import {Colors, Waves, Images, Fonts} from '../constants';
 import {Box, Btn} from '../components';
 import Traduction from '../translate';
-import GeneralStorage from '../Store/Storage/GeneralStorage';
 import {useDispatch, useSelector} from 'react-redux';
-import GeneralAction from '../Store/Actions/GeneralAction';
 
 const {setWidth, setHeight} = Displayer;
 const logoSize = 35;
 
 const HomeScreen = ({navigation}) => {
-  const dispatch = useDispatch();
-
   const {lang} = useSelector(state => state.Language);
 
   const [isArabic, setIsArabic] = useState(lang);
@@ -67,20 +64,21 @@ const HomeScreen = ({navigation}) => {
             {Traduction[isArabic].homescrean}
           </Text>
           <View style={{flexDirection: 'row'}}>
-            <Box isArabic={isArabic}> {Traduction[isArabic].Plmo} </Box>
-            <Box isArabic={isArabic}> {Traduction[isArabic].Manui}</Box>
+            <TouchableOpacity onPress={() => navigation.navigate('Services')}>
+              <Box isArabic={isArabic}> {Traduction[isArabic].Plmo} </Box>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate('Services')}>
+              <Box isArabic={isArabic}> {Traduction[isArabic].Manui}</Box>
+            </TouchableOpacity>
           </View>
           <View style={{flexDirection: 'row'}}>
-            <Box isArabic={isArabic}>{Traduction[isArabic].clima}</Box>
-            <Box isArabic={isArabic}> {Traduction[isArabic].Elec}</Box>
+            <TouchableOpacity onPress={() => navigation.navigate('Services')}>
+              <Box isArabic={isArabic}>{Traduction[isArabic].clima}</Box>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate('Services')}>
+              <Box isArabic={isArabic}> {Traduction[isArabic].Elec}</Box>
+            </TouchableOpacity>
           </View>
-          <Btn
-            isArabic={isArabic}
-            navigation={() => {
-              navigation.navigate('Services');
-            }}>
-            {Traduction[isArabic].btn4}
-          </Btn>
         </View>
       </ScrollView>
       {/* End Body */}

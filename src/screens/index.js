@@ -8,6 +8,8 @@ import SingUpScreen from './SingUpScreen';
 import SettingScreen from './SettingScreen';
 import UserInfo from './UserInfo';
 import Camera from './Camera';
+import Intro from './Intro';
+import TodoList from './TodoList';
 
 export {
   HomeScreen,
@@ -20,4 +22,6 @@ export {
   SettingScreen,
   UserInfo,
   Camera,
+  Intro,
+  TodoList,
 };

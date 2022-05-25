@@ -13,6 +13,8 @@ import {
   SettingScreen,
   UserInfo,
   Camera,
+  Intro,
+  TodoList,
 } from '../screens';
 
 const Stack = createNativeStackNavigator();
@@ -34,8 +36,9 @@ export default function index() {
           <Stack.Screen name="Splash" component={SplashScreen} />
         ) : (
           <>
+            <Stack.Screen name="Into" component={Intro} />
+            <Stack.Screen name="Todo" component={TodoList} />
             <Stack.Screen name="Home" component={HomeScreen} />
-
             <Stack.Screen name="Services" component={ServicesScreen} />
 
             <Stack.Screen name="Form" component={FormScreen} />
