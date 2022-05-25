@@ -12,7 +12,7 @@ import React, {useState} from 'react';
 import {Displayer} from '../utils';
 import {Colors, Waves, Images, Fonts} from '../constants';
 import {Box, Btn} from '../components';
-import Traduction from '../translate';
+
 import {useDispatch, useSelector} from 'react-redux';
 
 const {setWidth, setHeight} = Displayer;
@@ -64,34 +64,82 @@ const HomeScreen = ({navigation}) => {
             Where i spend My Time Today
           </Text>
           <View style={{flexDirection: 'row'}}>
-            <TouchableOpacity onPress={() => navigation.navigate('Services')}>
+            <TouchableOpacity
+              onPress={() =>
+                navigation.navigate({
+                  name: 'Todo',
+                  params: {post: 'At Home', id: 0},
+                })
+              }>
               <Box isArabic={isArabic}>At Home </Box>
             </TouchableOpacity>
-            <TouchableOpacity onPress={() => navigation.navigate('Services')}>
+            <TouchableOpacity
+              onPress={() =>
+                navigation.navigate({
+                  name: 'Todo',
+                  params: {post: 'At job', id: 1},
+                })
+              }>
               <Box isArabic={isArabic}> At job</Box>
             </TouchableOpacity>
           </View>
           <View style={{flexDirection: 'row'}}>
-            <TouchableOpacity onPress={() => navigation.navigate('Services')}>
+            <TouchableOpacity
+              onPress={() =>
+                navigation.navigate({
+                  name: 'Todo',
+                  params: {post: 'At Park'},
+                })
+              }>
               <Box isArabic={isArabic}>At Park</Box>
             </TouchableOpacity>
-            <TouchableOpacity onPress={() => navigation.navigate('Services')}>
+            <TouchableOpacity
+              onPress={() =>
+                navigation.navigate({
+                  name: 'Todo',
+                  params: {post: 'At Gym'},
+                })
+              }>
               <Box isArabic={isArabic}>At Gym</Box>
             </TouchableOpacity>
           </View>
           <View style={{flexDirection: 'row'}}>
-            <TouchableOpacity onPress={() => navigation.navigate('Services')}>
+            <TouchableOpacity
+              onPress={() =>
+                navigation.navigate({
+                  name: 'Todo',
+                  params: {post: 'At Gym'},
+                })
+              }>
               <Box isArabic={isArabic}>At Park</Box>
             </TouchableOpacity>
-            <TouchableOpacity onPress={() => navigation.navigate('Services')}>
+            <TouchableOpacity
+              onPress={() =>
+                navigation.navigate({
+                  name: 'Todo',
+                  params: {post: 'At Gym'},
+                })
+              }>
               <Box isArabic={isArabic}>At Gym</Box>
             </TouchableOpacity>
           </View>
           <View style={{flexDirection: 'row'}}>
-            <TouchableOpacity onPress={() => navigation.navigate('Services')}>
+            <TouchableOpacity
+              onPress={() =>
+                navigation.navigate({
+                  name: 'Todo',
+                  params: {post: 'At Gym'},
+                })
+              }>
               <Box isArabic={isArabic}>At Park</Box>
             </TouchableOpacity>
-            <TouchableOpacity onPress={() => navigation.navigate('Services')}>
+            <TouchableOpacity
+              onPress={() =>
+                navigation.navigate({
+                  name: 'Todo',
+                  params: {post: 'At Gym'},
+                })
+              }>
               <Box isArabic={isArabic}>At Gym</Box>
             </TouchableOpacity>
           </View>

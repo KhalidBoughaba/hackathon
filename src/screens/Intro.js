@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
   HeadOne: {
     flexDirection: 'row',
     paddingHorizontal: 40,
-    marginTop: 20,
+    marginTop: 10,
   },
   Title: {
     fontSize: 16,

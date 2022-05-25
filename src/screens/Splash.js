@@ -22,7 +22,6 @@ export default function Splash() {
           source={Loiding}
           style={{width: setWidth(55), height: setWidth(55)}}
           autoPlay
-          loop
         />
       </View>
     </>
