@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "741362161986",
+    "firebase_url": "https://fixapp-solcode-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "fixapp-solcode",
+    "storage_bucket": "fixapp-solcode.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:741362161986:android:2f27ce6d3b4a3e288c50db",
+        "android_client_info": {
+          "package_name": "com.fix_up"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "741362161986-7uk0q565nitprqcjl1a6nctmc27cl17b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fix_up",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "741362161986-cdigup7th04qkgl1ko0afdjf7umdh7gn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOS4xAklhpszTthnwiXE4Sz3waaqG0Sk8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "741362161986-cdigup7th04qkgl1ko0afdjf7umdh7gn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
