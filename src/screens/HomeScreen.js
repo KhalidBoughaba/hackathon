@@ -16,7 +16,7 @@ import Traduction from '../translate';
 import {useDispatch, useSelector} from 'react-redux';
 
 const {setWidth, setHeight} = Displayer;
-const logoSize = 35;
+const logoSize = 50;
 
 const HomeScreen = ({navigation}) => {
   const {lang} = useSelector(state => state.Language);
@@ -61,22 +61,38 @@ const HomeScreen = ({navigation}) => {
               color: '#000',
               marginBottom: 15,
             }}>
-            {Traduction[isArabic].homescrean}
+            Where i spend My Time Today
           </Text>
           <View style={{flexDirection: 'row'}}>
             <TouchableOpacity onPress={() => navigation.navigate('Services')}>
-              <Box isArabic={isArabic}> {Traduction[isArabic].Plmo} </Box>
+              <Box isArabic={isArabic}>At Home </Box>
             </TouchableOpacity>
             <TouchableOpacity onPress={() => navigation.navigate('Services')}>
-              <Box isArabic={isArabic}> {Traduction[isArabic].Manui}</Box>
+              <Box isArabic={isArabic}> At job</Box>
             </TouchableOpacity>
           </View>
           <View style={{flexDirection: 'row'}}>
             <TouchableOpacity onPress={() => navigation.navigate('Services')}>
-              <Box isArabic={isArabic}>{Traduction[isArabic].clima}</Box>
+              <Box isArabic={isArabic}>At Park</Box>
             </TouchableOpacity>
             <TouchableOpacity onPress={() => navigation.navigate('Services')}>
-              <Box isArabic={isArabic}> {Traduction[isArabic].Elec}</Box>
+              <Box isArabic={isArabic}>At Gym</Box>
+            </TouchableOpacity>
+          </View>
+          <View style={{flexDirection: 'row'}}>
+            <TouchableOpacity onPress={() => navigation.navigate('Services')}>
+              <Box isArabic={isArabic}>At Park</Box>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate('Services')}>
+              <Box isArabic={isArabic}>At Gym</Box>
+            </TouchableOpacity>
+          </View>
+          <View style={{flexDirection: 'row'}}>
+            <TouchableOpacity onPress={() => navigation.navigate('Services')}>
+              <Box isArabic={isArabic}>At Park</Box>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate('Services')}>
+              <Box isArabic={isArabic}>At Gym</Box>
             </TouchableOpacity>
           </View>
         </View>

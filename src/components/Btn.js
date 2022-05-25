@@ -7,6 +7,7 @@ const Btn = ({children, navigation, isArabic}) => {
     <TouchableOpacity
       onPress={navigation}
       style={{
+        alignSelf: 'center',
         width: 300,
         alignItems: 'center',
         backgroundColor: Colors.Light,
