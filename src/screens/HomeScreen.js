@@ -19,14 +19,9 @@ import GeneralAction from '../Store/Actions/GeneralAction';
 const {setWidth, setHeight} = Displayer;
 const logoSize = 35;
 
-const HomeScreen = () => {
+const HomeScreen = ({navigation}) => {
   const dispatch = useDispatch();
 
-  const toServicesScreen = () => {
-    GeneralStorage.setFirstTimeUse().then(() => {
-      dispatch(GeneralAction.setIsFirstTimeUse());
-    });
-  };
   const {lang} = useSelector(state => state.Language);
 
   const [isArabic, setIsArabic] = useState(lang);
@@ -79,7 +74,11 @@ const HomeScreen = () => {
             <Box isArabic={isArabic}>{Traduction[isArabic].clima}</Box>
             <Box isArabic={isArabic}> {Traduction[isArabic].Elec}</Box>
           </View>
-          <Btn isArabic={isArabic} navigation={toServicesScreen}>
+          <Btn
+            isArabic={isArabic}
+            navigation={() => {
+              navigation.navigate('Services');
+            }}>
             {Traduction[isArabic].btn4}
           </Btn>
         </View>

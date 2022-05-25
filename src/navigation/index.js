@@ -14,7 +14,6 @@ import {
   UserInfo,
   Camera,
 } from '../screens';
-// import GeneralAction from '../Store/Actions/GeneralAction';
 
 const Stack = createNativeStackNavigator();
 export default function index() {
@@ -35,11 +34,10 @@ export default function index() {
           <Stack.Screen name="Splash" component={SplashScreen} />
         ) : (
           <>
-            {isFirstTimeUse ? (
-              <Stack.Screen name="Home" component={HomeScreen} />
-            ) : (
-              <Stack.Screen name="Services" component={ServicesScreen} />
-            )}
+            <Stack.Screen name="Home" component={HomeScreen} />
+
+            <Stack.Screen name="Services" component={ServicesScreen} />
+
             <Stack.Screen name="Form" component={FormScreen} />
             <Stack.Screen name="Camera" component={Camera} />
             <Stack.Screen name="Send" component={SendScreen} />
